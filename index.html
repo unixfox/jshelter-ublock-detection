@@ -13,7 +13,7 @@
     <p>
       This page attempts to detect JShelter in <b>Chrome</b> by probing for
       <code>
-        chrome-extension://ammoloihpcbognfddfjcljgembpibcmb/web_accessible_resources/noop.html
+        chrome-extension://ammoloihpcbognfddfjcljgembpibcmb/options.html
       </code>
       and observing timing differences in comparison to a fake extension. It
       should work
@@ -66,9 +66,9 @@
 
       async function main() {
         const UBLOCK_URL =
-          "chrome-extension://ammoloihpcbognfddfjcljgembpibcmb/web_accessible_resources/noop.html";
+          "chrome-extension://ammoloihpcbognfddfjcljgembpibcmb/options.html";
         const FAKE_URL =
-          "chrome-extension://adabkammndnejioekmmdhgdnlfenpkci/web_accessible_resources/noop.html";
+          "chrome-extension://adabkammndnejioekmmdhgdnlfenpkci/options.html";
 
         console.log("probing...");
         const count = 500;
