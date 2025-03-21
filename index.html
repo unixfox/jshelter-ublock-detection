@@ -11,9 +11,9 @@
       Anti-Adblock
     </h1>
     <p>
-      This page attempts to detect uBlock origin in <b>Chrome</b> by probing for
+      This page attempts to detect JShelter in <b>Chrome</b> by probing for
       <code>
-        chrome-extension://cjpalhdlnbpafiamejdnhcphjbkeiagm/web_accessible_resources/noop.html
+        chrome-extension://ammoloihpcbognfddfjcljgembpibcmb/web_accessible_resources/noop.html
       </code>
       and observing timing differences in comparison to a fake extension. It
       should work
@@ -66,7 +66,7 @@
 
       async function main() {
         const UBLOCK_URL =
-          "chrome-extension://cjpalhdlnbpafiamejdnhcphjbkeiagm/web_accessible_resources/noop.html";
+          "chrome-extension://ammoloihpcbognfddfjcljgembpibcmb/web_accessible_resources/noop.html";
         const FAKE_URL =
           "chrome-extension://adabkammndnejioekmmdhgdnlfenpkci/web_accessible_resources/noop.html";
 
@@ -80,9 +80,9 @@
 
         const output = document.getElementById("main");
         if (num_greater / count > 0.66) {
-          output.innerText = "uBlock detected.";
+          output.innerText = "JShelter detected.";
         } else {
-          output.innerText = "you do not have uBlock.";
+          output.innerText = "you do not have JShelter.";
         }
         output.innerText += `\n${num_greater}/${count} requests were slower`;
         output.innerText += `\navg ublock: ${avg}`;
